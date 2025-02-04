@@ -1,0 +1,54 @@
+
+*{
+box-sizing:border-box;
+}
+body
+{
+    margin: 25px;
+    border: 5px solid ;
+    width: 100%;
+    font-family:'Times New Roman', Times, serif;
+   
+}
+.container
+{
+    background-color: rgb(81, 241, 241);
+    padding: 25px; 
+}
+h2{
+    text-align: center;
+
+}
+p
+{
+    text-decoration: underline;
+    text-decoration: solid;
+}
+#pa
+{
+text-align: center;
+}
+input
+{
+    border: 15px;
+    width: 100px;
+}
+textarea
+{
+    border: 10px;
+}
+select
+{
+    border: 10px;
+}
+input[type="submit"]
+{
+    background-color: rgb(38, 199, 46);
+    color: black;
+  cursor: pointer;
+  width: 100%;
+}
+input[type="submit"]:hover
+{
+    background-color: blue;
+}
