@@ -1,0 +1,29 @@
+  
+    <%- include("header") -%>
+    
+    <div class="box" id="heading">
+        <h1><%= kindofday %> TO-DO List </h1>
+    </div>
+
+    <div class="box">
+
+        <% newiteam.forEach(function(ni){ %>
+            <form action="/delete" method="post">
+                <div class="item">
+                    <input type="checkbox" onchange="this.form.submit()" name="checkbox" value="<%=ni._id%>">
+                    
+                    <p><%=ni.name%></p>
+                </div>   
+                <input type="hidden" name="listname" value="<%=kindofday%>">
+                     <% }) %>
+            </form>
+            
+
+             <form class="item" action="/" method="post">
+                <input type="text" name="newiteam" placeholder="New item" required autocomplete="on">
+                <button type="submit" value="<%=kindofday%>" name="listTitle">+</button>
+                
+          </form>   
+    </div>
+      
+    <%- include("footer") -%>

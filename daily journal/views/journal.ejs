@@ -1,0 +1,30 @@
+
+    <%- include("partials/header") -%>
+   <div class="b">
+   <h1>
+    <%=title%> 
+  </h1>
+   
+
+
+    <p> <%=content%></p>
+        
+    <%  j.forEach(function(po){ %>
+      <h1>
+        <%=po.title%>
+      </h1>
+      <p> <%=po.content.substring(0,50)+"..."%><a href="/posts/<%=po.title%>">Read more</a>/ Remove</p>
+      <% });%>
+      
+      
+
+      <div>
+        <h2>TO COMPOSE:</h2>
+        <button type="submit"><a href="/compose">compose</a></button>
+      </div>
+      
+    </div>
+   
+  
+   
+   <%- include("partials/footer") -%>
